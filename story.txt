@@ -1,0 +1,144 @@
+[start]
+text=Howd you get here? you stand up and rub your head. A Bright light blinds you as your eyes adjust to the light. The Face seems to look at you expectently.
+image=Normal2
+choices=Walk Up To It:choice1,Leave:Lazy1
+
+[choice1]
+text="HELLO HELLO HUMAN" The robot came to life
+
+image=Normal
+choices=Say Hello:choice3,Try to leave:choice4
+
+[choice3]
+text="FINALY A FRIENDLY ONE" he seems happy? "HAVE I GOT A CONVO FOR YOU!"
+
+image=Happy2
+choices=Step closer to listen:choice6,Nevermind Time to leave:choice42
+
+[choice4]
+text="SILLY HUMAN YOU CANT LEAVE ME! WE HAVE SO MUCH TO TALK ABOUT" Your legs seem to lock in place
+
+image=Normal3
+choices=Ask Whats Happening:choice6,What do the Buttons do?:choice8
+
+[choice42]
+text="SILLY HUMAN YOU CANT LEAVE ME! WE HAVE SO MUCH TO TALK ABOUT" Your legs seem to lock in place "I HAD HOPED IT WOULD BE DIFFERENT WITH YOU..."
+
+image=Normal3
+choices=Ask Whats Happening:choice7,What do the Buttons do?:choice8
+
+#Being kind
+
+[choice5]
+text=The object gives you a vision.
+
+image=vision
+choices=Follow the vision:choice9,Reject it:end1
+
+[choice6]
+text=You leave the object alone.
+
+image=room
+choices=Go back:choice4,Take a nap:end3
+
+[choice7]
+text=A wild animal appears!
+
+image=forest
+choices=Fight:end4,Run:end5
+
+#BUTTON SEGMENT
+
+[choice8]
+text=Your eyes linger on the buttons, imagining the possibilities. "YOU KNOW WHAT? I DONT EVEN KNOW WHAT HAPPENS. FOR SAFFTY REASONS PLEASE DONT PRESS"
+
+image=Push
+choices=Press it:choice9,Ask to be let go:choice5
+
+[choice9]
+text=You pushed the button. "WHAT DID Y...OU.. DO.OOO..." The Robot seems to be in pain
+
+image=Pushed
+choices=just watch:choice10
+
+[choice10]
+text=You see the path to a treasure.
+
+image=Loading
+choices=wait:choice11
+
+[choice11]
+text=You see the path to a treasure.
+
+image=RedWhat
+choices=Ask if he feels different:choice12
+
+[choice12]
+text=You see the path to a treasure.
+
+image=RED
+choices=
+
+[choice13]
+text=You see the path to a treasure.
+
+image=RedWhat
+choices=
+
+
+
+# Endpoints
+
+[Lazy2]
+text=Bad ending: rejected the vision.
+
+image=vision
+choices=
+
+[Lazy1]
+text=You tried leaving but just thinking about leaving without talking to the machine fills you with regret. The regret ends up killing you (ENDING 1)
+
+image=BlueScreen
+choices=Try Again and Play The Game This Time...:start
+
+[Good]
+text=You napped and missed your chance. (bad ending)
+
+image=Reboot
+choices=YAY Go Again?:start
+
+[Bad]
+text=You fought bravely but lost. (bad ending)
+
+image=Stare2
+choices=Try Again:start
+
+[OkEnd]
+text=You escaped safely. (good ending)
+
+image=Happy
+choices=Try Again:start,Press Button:choice9
+
+[end1]
+text=The key remains. (neutral ending)
+
+image=room
+choices=Try Again:start
+
+[end2]
+text=You found the treasure! (good ending)
+
+image=treasure
+choices=Try Again:start
+
+[end3]
+text=You ignored the treasure. (neutral ending)
+
+image=treasure
+choices=Try Again:start
+
+[end4]
+text=You entered the secret door! (good ending)
+
+image=room
+choices=Try Again:start
