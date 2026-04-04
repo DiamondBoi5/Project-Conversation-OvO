@@ -62,13 +62,13 @@ image=Pushed
 choices=just watch:button3
 
 [button3]
-text=You see the path to a treasure.
+text=Everything goes quiet...
 
 image=Loading
 choices=wait:button4
 
 [button4]
-text=You see the path to a treasure.
+text="I DONT KNOW WHAT JUST HAPPENED" The robot appears bewildered, unsure of what to do next.
 
 image=RedWhat
 choices=Ask if he feels different:button5
@@ -77,13 +77,20 @@ choices=Ask if he feels different:button5
 text=You see the path to a treasure.
 
 image=RED
-choices=erm...:button6
+choices=erm...:button6,(push it again...):button7
 
 [button6]
-text=You see the path to a treasure.
+text="CAN YOU GO NOW.... THIS JUST DOESNT FEEL RIGHT ANYMORE. I HAD THIS WHOLE PLAN BUT YOU PUSHED MY BUTTON.... Just leave :("
 
 image=RedWhat
-choices=
+choices=Leave:ButtonEND, What if push again?:button7
+
+[button7]
+text=I think you killed him... thats sucky of you to have done. 
+
+image=dead
+choices=Im Sorry:button8,NEVER SORRY:button9
+
 
 #LazyBum----------------------------------------------------------------------------------
 
@@ -109,11 +116,11 @@ text=You tried leaving but just thinking about leaving without talking to the ma
 image=BlueScreen
 choices=Try Again and Play The Game This Time...:start
 
-[Good]
-text=You napped and missed your chance. (bad ending)
+[ButtonEND]
+text=You regain control of you legs and are able to walk away from whatever that encounter was... you do feel kinda bad, maybe you shouldnt have pressed his button.
 
 image=Reboot
-choices=YAY Go Again?:start
+choices=Welp, Wanna Go Again?:start
 
 [Bad]
 text=You fought bravely but lost. (bad ending)
