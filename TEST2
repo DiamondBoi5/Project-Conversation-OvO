@@ -4,7 +4,7 @@ import json
 pygame.init()
 WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("ROBO ADVENTURE")
+pygame.display.set_caption("ScreenFriend - A Text-Based Adventure Game")
 font = pygame.font.SysFont(None, 32)
 
 # makes text not go off screen--------------------------------------

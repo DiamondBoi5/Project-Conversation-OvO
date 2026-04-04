@@ -10,7 +10,7 @@ image=Normal
 choices=Say Hello:choice3,Try to leave:choice4
 
 [choice3]
-text="FINALY A FRIENDLY ONE" he seems happy? "HAVE I GOT A CONVO FOR YOU!"
+text="FINALY A FRIENDLY ONE" he seems... happy? "HAVE I GOT A CONVO FOR YOU!"
 
 image=Happy2
 choices=Step closer to listen:kind2,Nevermind Time to leave:choice4-2
