@@ -88,7 +88,7 @@ while running:
     for i, choice in enumerate(scene["choices"]):
         choice_text = f"{i+1}. {choice[0]}"
         choice_surface = font.render(choice_text, True, (200,200,0))
-        screen.blit(choice_surface, (20,530 + i*30))
+        screen.blit(choice_surface, (20,510 + i*30))
 
     # the button press reader 9000--------------------------------------
     for event in pygame.event.get():

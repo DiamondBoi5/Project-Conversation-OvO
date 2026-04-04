@@ -1,7 +1,7 @@
 [start]
 text=Howd you get here? you stand up and rub your head. A Bright light blinds you as your eyes adjust to the light. The Face seems to look at you expectently.
 image=Normal2
-choices=Walk Up To It:choice1,Leave:Lazy1
+choices=Walk Up To It:choice1,Stay put:lazy1,Leave:LeaveEnd1
 
 [choice1]
 text="HELLO HELLO HUMAN" The robot came to life
@@ -13,89 +13,97 @@ choices=Say Hello:choice3,Try to leave:choice4
 text="FINALY A FRIENDLY ONE" he seems happy? "HAVE I GOT A CONVO FOR YOU!"
 
 image=Happy2
-choices=Step closer to listen:choice6,Nevermind Time to leave:choice42
+choices=Step closer to listen:kind2,Nevermind Time to leave:choice4-2
 
 [choice4]
 text="SILLY HUMAN YOU CANT LEAVE ME! WE HAVE SO MUCH TO TALK ABOUT" Your legs seem to lock in place
 
 image=Normal3
-choices=Ask Whats Happening:choice6,What do the Buttons do?:choice8
+choices=Ask Whats Happening:kind1,What do the Buttons do?:button1
 
-[choice42]
+[choice4-2]
 text="SILLY HUMAN YOU CANT LEAVE ME! WE HAVE SO MUCH TO TALK ABOUT" Your legs seem to lock in place "I HAD HOPED IT WOULD BE DIFFERENT WITH YOU..."
 
 image=Normal3
-choices=Ask Whats Happening:choice7,What do the Buttons do?:choice8
+choices=Ask Whats Happening:kind1,What do the Buttons do?:button1
 
-#Being kind
+#Being kind----------------------------------------------------------------------------------
 
-[choice5]
+[kind1]
 text=The object gives you a vision.
 
-image=vision
-choices=Follow the vision:choice9,Reject it:end1
+image=Blank
+choices=Follow the vision:button2,Reject it:end1
 
-[choice6]
+[kind2]
 text=You leave the object alone.
 
-image=room
+image=Blank
 choices=Go back:choice4,Take a nap:end3
 
-[choice7]
+[kind3]
 text=A wild animal appears!
 
-image=forest
+image=Blank
 choices=Fight:end4,Run:end5
 
-#BUTTON SEGMENT
+#BUTTON SEGMENT----------------------------------------------------------------------------------
 
-[choice8]
+[button1]
 text=Your eyes linger on the buttons, imagining the possibilities. "YOU KNOW WHAT? I DONT EVEN KNOW WHAT HAPPENS. FOR SAFFTY REASONS PLEASE DONT PRESS"
 
 image=Push
-choices=Press it:choice9,Ask to be let go:choice5
+choices=Press it:button2,Ask to be let go:kind1
 
-[choice9]
+[button2]
 text=You pushed the button. "WHAT DID Y...OU.. DO.OOO..." The Robot seems to be in pain
 
 image=Pushed
-choices=just watch:choice10
+choices=just watch:button3
 
-[choice10]
+[button3]
 text=You see the path to a treasure.
 
 image=Loading
-choices=wait:choice11
+choices=wait:button4
 
-[choice11]
+[button4]
 text=You see the path to a treasure.
 
 image=RedWhat
-choices=Ask if he feels different:choice12
+choices=Ask if he feels different:button5
 
-[choice12]
+[button5]
 text=You see the path to a treasure.
 
 image=RED
-choices=
+choices=erm...:button6
 
-[choice13]
+[button6]
 text=You see the path to a treasure.
 
 image=RedWhat
 choices=
 
+#LazyBum----------------------------------------------------------------------------------
+
+[lazy1]
+text=You see the path to a treasure.
+
+image=Stare
+choices=
 
 
-# Endpoints
 
-[Lazy2]
+# Endpoints----------------------------------------------------------------------------------
+
+[LazyEnd]
 text=Bad ending: rejected the vision.
 
 image=vision
 choices=
 
-[Lazy1]
+[LeaveEnd1]
 text=You tried leaving but just thinking about leaving without talking to the machine fills you with regret. The regret ends up killing you (ENDING 1)
 
 image=BlueScreen
@@ -117,7 +125,7 @@ choices=Try Again:start
 text=You escaped safely. (good ending)
 
 image=Happy
-choices=Try Again:start,Press Button:choice9
+choices=Try Again:start,Press Button:button2
 
 [end1]
 text=The key remains. (neutral ending)
