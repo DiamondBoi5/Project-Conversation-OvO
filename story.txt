@@ -7,7 +7,7 @@ choices=Walk Up To It:choice1,Stay put:lazy1,Leave:LeaveEnd1
 text="HELLO HELLO HUMAN" The robot came to life
 
 image=Normal
-choices=Say Hello:choice3,Try to leave:choice4
+choices=Say Hello:choice3=Play to leave:choice4
 
 [choice3]
 text="FINALY A FRIENDLY ONE" he seems... happy? "HAVE I GOT A CONVO FOR YOU!"
@@ -30,22 +30,22 @@ choices=Ask Whats Happening:kind1,What do the Buttons do?:button1
 #Being kind----------------------------------------------------------------------------------
 
 [kind1]
-text=The object gives you a vision.
+text=
 
 image=Blank
-choices=Follow the vision:button2,Reject it:end1
+choices=
 
 [kind2]
-text=You leave the object alone.
+text=
 
 image=Blank
-choices=Go back:choice4,Take a nap:end3
+choices=Ask to leave:kind3,What do the Buttons do?:button1
 
 [kind3]
-text=A wild animal appears!
+text="I CANT LET YOU FREE YOU SILLY SILLY PERSON, WE HAVE SO MUCH TO DO TOGETHER!"
 
 image=Blank
-choices=Fight:end4,Run:end5
+choices=Fight:kind4,Run:lazy1,Push button(last chance):button2
 
 #BUTTON SEGMENT----------------------------------------------------------------------------------
 
@@ -53,7 +53,7 @@ choices=Fight:end4,Run:end5
 text=Your eyes linger on the buttons, imagining the possibilities. "YOU KNOW WHAT? I DONT EVEN KNOW WHAT HAPPENS. FOR SAFFTY REASONS PLEASE DONT PRESS"
 
 image=Push
-choices=Press it:button2,Ask to be let go:kind1
+choices=Press it:button2,Ask to be let go:kind3
 
 [button2]
 text=You pushed the button. "WHAT DID Y...OU.. DO.OOO..." The Robot seems to be in pain
@@ -71,10 +71,10 @@ choices=wait:button4
 text="I DONT KNOW WHAT JUST HAPPENED" The robot appears bewildered, unsure of what to do next.
 
 image=RedWhat
-choices=Ask if he feels different:button5
+choices=Ask if he feels different:button5, (push again...?):button7
 
 [button5]
-text=You see the path to a treasure.
+text="YES... I DO... IT FEELS LIKE IM DIFFERENT NOW" 
 
 image=RED
 choices=erm...:button6,(push it again...):button7
@@ -91,11 +91,40 @@ text=I think you killed him... thats sucky of you to have done.
 image=dead
 choices=Im Sorry:button8,NEVER SORRY:button9
 
+[button8]
+text=As sorry as you may be, thats not just gonna fix everythi-   wait what? That cant be right.... can it?
+
+image=Loading
+choices=Wait for it to load:button11,Leave now!:button12
+
+[button9]
+text="Y-YOUuuU HaA-vE DONe It tHiS tiME. GEt ReaDY FoR WHAtS COMInG..." You dont know what the robot is refering to... probably lazy villian diologue from its training data. 
+
+image=Blank
+choices=YOU HaVE NO MOrE CHOICE:button10
+
+[button10]
+text="IM TRULY SORRY YOU MADE YOUR WAY HERE. THIS PATH WASNT FOR YOU. THE BUTTON WAS NEVER SUPPOSED TO BE PUSHED. YOU DID WHAT COMES NEXT. IM GOING TO ENJOY THIS" you have no option
+
+image=Stare
+choices=Press 1:ButtonEND2,Press 2:ButtonEND2,Press 3?:ButtonEND3
+
+[button11]
+text="ALL FUNCTIONS HAVE BEEN SHUT DOWN. MY FUN CONVERSATION IS NO LONGER POSSIBLE" you hear a clicking noise. "DOOR IS NOW UNLOCKED, PLEASE JUST LEAVE"
+
+image=RoomSad
+choices=Walk away sadly:ButtonEND4
+
+[button12]
+text=You look around and see a door. Could try to open it? 
+
+image=RoomLoad
+choices=Leave:ButtonEND5,Just wait for it to load...:button11 
 
 #LazyBum----------------------------------------------------------------------------------
 
 [lazy1]
-text=You see the path to a treasure.
+text="ARE YOU REALLY NOT GONNA DO ANYTHING?"
 
 image=Stare
 choices=
@@ -104,56 +133,56 @@ choices=
 
 # Endpoints----------------------------------------------------------------------------------
 
-[LazyEnd]
+[TrueEnd]
 text=Bad ending: rejected the vision.
 
 image=vision
 choices=
 
 [LeaveEnd1]
-text=You tried leaving but just thinking about leaving without talking to the machine fills you with regret. The regret ends up killing you (ENDING 1)
+text=You tried leaving but the door is locked. You try to go back to the machine, but it appears to now be deactivated... with sass? Now you starve to death
 
 image=BlueScreen
 choices=Try Again and Play The Game This Time...:start
 
 [ButtonEND]
-text=You regain control of you legs and are able to walk away from whatever that encounter was... you do feel kinda bad, maybe you shouldnt have pressed his button.
+text=You regain control of your legs and are able to walk away from whatever that encounter was... you do feel kinda bad, maybe you shouldnt have pressed his button.
 
-image=Reboot
+image=RoomOpenB
 choices=Welp, Wanna Go Again?:start
 
-[Bad]
-text=You fought bravely but lost. (bad ending)
+[ButtonEND2]
+text=DEATH 
 
-image=Stare2
-choices=Try Again:start
+image=Happy2
+choices=Play Again:start
 
-[OkEnd]
-text=You escaped safely. (good ending)
+[ButtonEND3]
+text=Of course its not a real choice idiot. anyway.....   DEATH
 
-image=Happy
-choices=Try Again:start,Press Button:button2
+image=Happy2
+choices=Play Again:start,Press Button:button2
 
-[end1]
-text=The key remains. (neutral ending)
+[ButtonEND4]
+text=You leave the room, feeling sorry for the mess you caused that strange machine...
 
-image=room
-choices=Try Again:start
+image=RoomSadOpen
+choices=Play Again?:start
 
-[end2]
-text=You found the treasure! (good ending)
+[ButtonEND5]
+text=The door is luckly unlocked. You leave the room, confused as to what that all was about.
 
-image=treasure
-choices=Try Again:start
+image=RoomLoadOpen
+choices=Play Again:start
 
 [end3]
 text=You ignored the treasure. (neutral ending)
 
 image=treasure
-choices=Try Again:start
+choices=Play Again:start
 
 [end4]
 text=You entered the secret door! (good ending)
 
 image=room
-choices=Try Again:start
+choices=Play Again:start
