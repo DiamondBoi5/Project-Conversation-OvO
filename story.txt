@@ -175,8 +175,8 @@ text=The door is luckly unlocked. You leave the room, confused as to what that a
 image=RoomLoadOpen
 choices=Play Again:start
 
-[end3]
-text=You ignored the treasure. (neutral ending)
+[kindEnd1]
+text=You get to leave YIPPEE!! 
 
 image=treasure
 choices=Play Again:start
@@ -186,3 +186,13 @@ text=You entered the secret door! (good ending)
 
 image=room
 choices=Play Again:start
+
+#--------------------------------------------------------------------------------------
+
+[TitleScreen]
+text=WELCOME!! This game requires you to use the number to make selections. Please Have Fun!!
+
+image=TITLE
+choices=START:start,Leave:exit
+
+[exit] #leave game

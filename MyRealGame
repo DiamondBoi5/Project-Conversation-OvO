@@ -1,11 +1,12 @@
 import pygame, sys, os
 import json
-
+#Project Conversation computer name is CH1P: Conversational Haver ( for 1 Person / or 1st Prototype )
 pygame.init()
 WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Project Conversation [OvO]")
 font = pygame.font.SysFont(None, 32)
+
 
 #Music Player--------------------------------------
 #pygame.mixer.init()
@@ -56,7 +57,7 @@ def load_story(filename):
     return story
 
 story = load_story("story.txt")
-current_scene = "start"
+current_scene = "TitleScreen"
 
 # load images from folder based on text file--------------------------------------
 image_folder = "image"  # folder where images are stored
