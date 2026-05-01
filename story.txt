@@ -10,30 +10,30 @@ image=Normal
 choices=Say Hello:choice3,Try to leave:choice4
 
 [choice3]
-text="FINALY A FRIENDLY ONE" he seems... happy? "HAVE I GOT A SITUATION FOR YOU!"
+text="FINALY A FRIENDLY ONE" he seems... happy? "HAVE I GOT A GOOD TIME FOR YOU!"
 
 image=Happy2
-choices=Step closer to listen:kind2,Nevermind Time to leave:choice4-2
+choices=Step closer to listen:kind1,Nevermind Time to leave:choice4-2
 
 [choice4]
 text="SILLY HUMAN YOU CANT LEAVE ME! WE HAVE SO MUCH TO TALK ABOUT" Your legs seem to lock in place
 
 image=Normal3
-choices=Ask Whats Happening:kind1,What do the Buttons do?:button1
+choices=Ask Whats Happening:kind3,What do the Buttons do?:button1
 
 [choice4-2]
 text="SILLY HUMAN YOU CANT LEAVE ME! WE HAVE SO MUCH TO TALK ABOUT" Your legs seem to lock in place "I HAD HOPED IT WOULD BE DIFFERENT WITH YOU..."
 
 image=Normal3
-choices=Ask Whats Happening:kind1,What do the Buttons do?:button1
+choices=Ask Whats Happening:kind3,What do the Buttons do?:button1
 
 #Being kind----------------------------------------------------------------------------------
 
 [kind1]
-text=
+text="NOW NOW, FIRST INTRUDUCTIONS! MY NAME IS CH1P. IM THE 1ST PROTOTYPE CONVERSATIONAL HAVER. AND YOU ARE?"
 
-image=Blank
-choices=
+image=Surprise
+choices=Tell him you're leaving:kind3,Tell him your name:kind2
 
 [kind2]
 text=
@@ -44,8 +44,8 @@ choices=Ask to leave:kind3,What do the Buttons do?:button1
 [kind3]
 text="I CANT LET YOU FREE YOU SILLY SILLY PERSON, WE HAVE SO MUCH TO DO TOGETHER!"
 
-image=Blank
-choices=Fight:kind4,Run:lazy1,Push button(last chance):button2
+image=Surprise3
+choices=Fight:kind4,Run:run1,Push button(last chance):button2
 
 #BUTTON SEGMENT----------------------------------------------------------------------------------
 
@@ -124,7 +124,7 @@ choices=Leave:ButtonEND5,Just wait for it to load...:button11
 #LazyBum----------------------------------------------------------------------------------
 
 [lazy1]
-text="HELLO HELLO HUMAN" The robot came to life
+text="HELLO HELLO HUMAN" The robot came to life waiting patiently for you to do something
 
 image=Normal
 choices=Say Hello:choice3,Try to leave:choice4,Do nothing:lazy2
@@ -145,7 +145,7 @@ choices=Look towards the door:lazy4,Back to doing nothing.:lazy10
 text=He's right. talking is doing too much. You decide to look towards the door. "UNFORTUNATLY FOR YOU, THAT DOOR ISNT OPENING UNTIL YOU TALK WITH ME."
 
 image=RoomAKWARD
-choices=
+choices=Do Something:lazy5,Do NOTHING:lazy10
 
 [lazy5]
 text=
@@ -159,11 +159,11 @@ text=
 image=
 choices=
 
-[lazy7]
+[lazy10]
 text=
 
-image=
-choices=
+image=Stare3
+choices=LAZY TO THE END WOOO!!:LazyEnd,
 
 # Endpoints----------------------------------------------------------------------------------
 
@@ -215,10 +215,10 @@ text=You get to leave YIPPEE!!
 image=treasure
 choices=Play Again:start
 
-[end4]
-text=You entered the secret door! (good ending)
+[LazyEnd]
+text=idk man. this is lazy for a reason
 
-image=room
+image=Blank
 choices=Play Again:start
 
 #--------------------------------------------------------------------------------------
