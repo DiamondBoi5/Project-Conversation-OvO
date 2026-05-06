@@ -12,10 +12,14 @@ font = pygame.font.SysFont(None, 32)
 
 #Music Player--------------------------------------
 #pygame.mixer.init()
-#pygame.mixer.music.load("SONGNAME.mp3")
+#pygame.mixer.music.load("BGM.mp3")
 
 # Play the music in a loop
 #pygame.mixer.music.play(-1)
+
+#pygame.mixer.music.set_volume(0.02)
+
+
 
           
 # makes text not go off screen--------------------------------------
@@ -74,6 +78,7 @@ for scene in story:
         surf = pygame.Surface((525, 400))
         surf.fill((50,50,50))
         images[story[scene]["image"]] = surf
+
 
 # loop that makes thing work--------------------------------------
 running = True
