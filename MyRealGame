@@ -10,18 +10,6 @@ pygame.display.set_icon(pygame.image.load("icon.png"))
 font = pygame.font.SysFont(None, 32)
 
 
-#Music Player--------------------------------------
-#pygame.mixer.init()
-#pygame.mixer.music.load("BGM.mp3")
-
-# Play the music in a loop
-#pygame.mixer.music.play(-1)
-
-#pygame.mixer.music.set_volume(0.02)
-
-
-
-          
 # makes text not go off screen--------------------------------------
 def _wrap_text(font, text, max_width):
     words = text.split()
@@ -129,3 +117,12 @@ while running:
 
 pygame.quit()
 sys.exit()
+
+#Music Player NOT USED--------------------------------------
+#pygame.mixer.init()
+#pygame.mixer.music.load("BGM.mp3")
+
+# Play the music in a loop
+#pygame.mixer.music.play(-1)
+
+#pygame.mixer.music.set_volume(0.02)
