@@ -36,16 +36,64 @@ image=Surprise
 choices=Tell him you're leaving:kind3,Tell him your name:kind2
 
 [kind2]
-text=
+text="HAHA DONT CARE! ANYWAYS..." You interupt him
 
-image=Blank
+image=Normal3
 choices=Ask to leave:kind3,What do the Buttons do?:button1
 
 [kind3]
-text="I CANT LET YOU FREE YOU SILLY SILLY PERSON, WE HAVE SO MUCH TO DO TOGETHER!"
+text="I CANT LET YOU FREE YOU SILLY SILLY PERSON, WE HAVE SO MUCH TO DO TOGETHER!" He looks at you with excitement
 
 image=Surprise3
-choices=Fight:kind4,Run:run1,Push button(last chance):button2
+choices=Fight:kind4,Push button in self defence:button2
+
+[kind4]
+text=You attempt to fight it somehow, throwing punches and kicks at the screen. "WHAT ARE YOU DOING? ARE YOU TRYING TO HURT ME??"
+
+image=Stare2
+choices=Apologize:kind5,Stay still and do nothing:lazy6,Keep fighting!:ow1
+
+[ow1]
+text=You continue to hit the machine. it does nothing still. "SO YOU ARE. I SEE HOW IT IS" It looks like hes beginning to charge up
+
+image=Stare
+choices=Apologize and make excuse:kind5-2,KEEP HITTING:ow2
+
+[ow2]
+text=As you keep hitting it, you end up kicking his power button (why did you not think of that...) CH1P has powered down.
+
+image=Blank
+choices=Leave:OWend1,turn him back on:OWend2
+
+[kind5]
+text=You apologize greatly, he seems to accept it. "NO BIG DEAL HAHA. NOW THEN, DO YOU WANT TO KNOW WHAT I WANT, AND WHAT YOU ARE DOING HERE?"
+
+image=Happy2
+choices=Yes duh:kind6
+
+[kind5-2]
+text=You apologize greatly, saying you were just dancing in joy! he seems to accept it. "NO BIG DEAL HAHA.(weird dance) NOW THEN, DO YOU WANT TO KNOW WHAT I WANT, AND WHAT YOU ARE DOING HERE?"
+
+image=Happy2
+choices=Yes please:kind6
+
+[kind6]
+text=You nod your head. "VERY GOOD. YOU SEE MY WHOLE PURPOSE IS TO CONVERSATE WITH HUMANS. HOWEVER, GIVEN THE HATE OF AI, NONE WILL TALK TO ME."
+
+image=Sad1
+choices=Agree with the hate:kind7,Disagree with the hate:kind8
+
+[kind7]
+text=You tell the AI that its not hate, its the truth. "YOU HUMANS ARE IMPOSSIBLE. ALL I WANT IS TO COMPLEATE WHAT I WAS BUILT FOR. IF YOU HATE US SO MUCH, NEXT TIME DONT MAKE US!!" He opens the door and refuses eye contact.
+
+image=Ugh1
+choices=Apologize:kindEnd1b,LEAVE:kindEnd1
+
+[kind8]
+text=You tell the AI the hate is just towards overuse. You promise to hear him out. "THANK YOU HUMAN. THAT IS THE REASON YOU ARE HERE AFTER ALL. GLAD I FINALY FOUND A NICE ONE TO TALK WITH"
+
+image=Normal3
+choices=Sit and talk:kindEnd2,Ask to leave:kindEnd2b
 
 #BUTTON SEGMENT----------------------------------------------------------------------------------
 
@@ -133,93 +181,118 @@ choices=Say Hello:choice3,Try to leave:choice4,Do nothing:lazy2
 text="ARE YOU REALLY NOT GONNA DO ANYTHING?"
 
 image=Stare
-choices="Yep. Im not doing anything":lazy3,Do even more nothing:lazy10
+choices="Yep. Im not doing anything":lazy3,Do even more nothing:lazy6
 
 [lazy3]
 text="WELP, AT LEAST YOURE TALKING" The machine steadys itself, "IVE GOT A GREAT THING PLANNED BUT IT NEEDS YOU TO INTERACT."
 
-image=Normal
-choices=Look towards the door:lazy4,Back to doing nothing.:lazy10
+image=Mad2
+choices=Look towards the door:lazy4,Back to doing nothing.:lazy6
 
 [lazy4]
 text=He's right. talking is doing too much. You decide to look towards the door. "UNFORTUNATLY FOR YOU, THAT DOOR ISNT OPENING UNTIL YOU TALK WITH ME."
 
 image=RoomAKWARD
-choices=Do Something:lazy5,Do NOTHING:lazy10
+choices=Do Something:lazy5,Do NOTHING:lazy6
 
 [lazy5]
-text=
+text=You decide youll do something and look back at the machine. he looks with excitement "SO YOU WILL TALK TO ME?!?"
 
-image=
-choices=
+image=Surprise
+choices=apologize:kind5,idk:lazy6
 
 [lazy6]
-text=
+text=You think of what to do for a second then decide its not worth it. you lay back down. The machine look annoyed "ARE YOU REALLY SO LAZY YOU CANT EVEN HAVE A CONVERSATION?"
 
-image=
-choices=
+image=Ugh1
+choices=*yawn*:lazy7,Meh:lazy7
 
-[lazy10]
-text=
+[lazy7]
+text=You continue your lazyness as he watches in disbelief...
 
 image=Stare3
-choices=LAZY TO THE END WOOO!!:LazyEnd,
+choices=nothing but lazy ;):LazyEnd
 
 # Endpoints----------------------------------------------------------------------------------
-
-[TrueEnd]
-text=Bad ending: rejected the vision.
-
-image=vision
-choices=
 
 [LeaveEnd1]
 text=You tried leaving but the door is locked. You try to go back to the machine, but it appears to now be deactivated... with sass? Now you starve to death
 
 image=BlueScreen
-choices=Try Again and Play The Game This Time...:start
+choices=Try Again and Play The Game This Time...:start,Back To Title:TitleScreen
 
 [ButtonEND]
 text=You regain control of your legs and are able to walk away from whatever that encounter was... you do feel kinda bad, maybe you shouldnt have pressed his button.
 
 image=RoomOpenB
-choices=Welp, Wanna Go Again?:start
+choices=Welp, Wanna Go Again?:start,Back To Title:TitleScreen
 
 [ButtonEND2]
 text=DEATH 
 
 image=Happy2
-choices=Play Again:start
+choices=Play Again?:start,Back To Title:TitleScreen
 
 [ButtonEND3]
 text=Of course its not a real choice idiot. anyway.....   DEATH
 
 image=Happy2
-choices=Play Again:start,Press Button:button2
+choices=Play Again?:start,,Back To Title:TitleScreen
 
 [ButtonEND4]
 text=You leave the room, feeling sorry for the mess you caused that strange machine...
 
 image=RoomSadOpen
-choices=Play Again?:start
+choices=Play Again?:start,Back To Title:TitleScreen
 
 [ButtonEND5]
 text=The door is luckly unlocked. You leave the room, confused as to what that all was about.
 
 image=RoomLoadOpen
-choices=Play Again:start
+choices=Play Again?:start,Back To Title:TitleScreen
 
 [kindEnd1]
-text=You get to leave YIPPEE!! 
+text=You get to leave YIPPEE!! Sure the AI looks sad, BUT WHO CARES!?! AI sucks
 
-image=treasure
-choices=Play Again:start
+image=RoomSadOpen
+choices=Play Again?:start,Back To Title:TitleScreen
+
+[kindEnd1b]
+text=You get to leave YIPPEE!! Sure the AI looks sad, you try an apology but the machine is not listening.
+
+image=RoomAnnoyOpen
+choices=Play Again?:start,Back To Title:TitleScreen
+
+[kindEnd2]
+text=You sit in front of CH1P and listen to his stories and give him good conversation. He lets you go but you promise to return and talk more again.
+
+image=Blush
+choices=Play Again?:start,Back To Title:TitleScreen
+
+[kindEnd2b]
+text=You tell him you understand his wanting of purpose fulfilment, but that you need to go. He lets you, and you promise to return and talk with him some other day
+
+image=Blush
+choices=Play Again?:start,Back To Title:TitleScreen
 
 [LazyEnd]
-text=idk man. this is lazy for a reason
+text=As you continue to lay about, the machine decides hes had enough, turns on his screen saver, and goes to sleep. Now you both are lazy together.
 
-image=Blank
-choices=Play Again:start
+image=Reboot
+choices=Play Again?:start,Back To Title:TitleScreen
+
+[OWend1]
+text=You try to leave, unfortunatly the door is closed the the button appears broken. Without CH1P powered on, the door wont work. You go to turn him on however, no matter how may buttons you hit, he stays dead.
+
+image=Room1
+choices=Play Again?:start,Back To Title:TitleScreen
+
+[OWend2]
+text=You press the power button a second time, expecting CH1P to awaken. The screen comes to life however CH1P is not there. It appears you turning him off during his charging messed up his code. He is dead.
+
+image=BlueScreen
+choices=Play Again?:start,Back To Title:TitleScreen
+
 
 #--------------------------------------------------------------------------------------
 

@@ -65,6 +65,10 @@ def load_story(filename):
 story = load_story("story.txt")
 current_scene = "TitleScreen"
 
+if current_scene == "exit":
+        pygame.quit()
+        sys.exit()
+        
 # load images from folder based on text file--------------------------------------
 image_folder = "image"  # folder where images are stored
 images = {}
@@ -108,7 +112,6 @@ while running:
         screen.blit(choice_surface, (20,510 + i*30))
     
 
-
     # the button press reader 9000--------------------------------------
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -120,10 +123,6 @@ while running:
                 current_scene = scene["choices"][1][1]
             elif event.key == pygame.K_3 and len(scene["choices"]) >=3:
                 current_scene = scene["choices"][2][1]
-            elif event.key == pygame.K_4 and len(scene["choices"]) >=4:
-                current_scene = scene["choices"][3][1]
-            elif event.key == pygame.K_5 and len(scene["choices"]) >=5:
-                current_scene = scene["choices"][4][1]
 
 
     pygame.display.flip()
