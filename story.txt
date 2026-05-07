@@ -52,7 +52,7 @@ choices=Fight:kind4,Push button in self defence:button2
 text=You attempt to fight it somehow, throwing punches and kicks at the screen. "WHAT ARE YOU DOING? ARE YOU TRYING TO HURT ME??"
 audio=kind4.mp3
 image=Stare2
-choices=Apologize:kind5,Stay still and do nothing:lazy6,Keep fighting!:ow1
+choices=Apologize:kind5,Stay still and do nothing:kind9,Keep fighting!:ow1
 
 [ow1]
 text=You continue to hit the machine. it does nothing still. "SO YOU ARE. I SEE HOW IT IS" It looks like hes beginning to charge up
@@ -95,6 +95,12 @@ text=You tell the AI that the hate is just towards overuse. You promise to hear 
 audio=kind8.mp3
 image=Normal3
 choices=Sit and talk:kindEnd2,Ask to leave:kindEnd2b
+
+[kind9]
+text="WHAT WAS THAT ABOUT?" you need to think of a way out of this...
+audio=kind9.mp3
+image=Ugh1
+choices=apologize:kind5-2,Push button:button2
 
 #BUTTON SEGMENT----------------------------------------------------------------------------------
 
@@ -218,7 +224,7 @@ choices=nothing but lazy ;):LazyEnd
 
 [LeaveEnd1]
 text=You tried leaving but the door is locked. You try to go back to the machine, but it appears to now be deactivated... with sass? Now you starve to death
-audio=
+audio=leaveend.mp3
 image=BlueScreen
 choices=Try Again and Play The Game This Time...:start,Back To Title:TitleScreen
 
