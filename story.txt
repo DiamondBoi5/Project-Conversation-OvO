@@ -299,7 +299,7 @@ choices=Play Again?:start,Back To Title:TitleScreen
 
 [TitleScreen]
 text=WELCOME!! This game requires you to use the numbers to make selections. Please Have Fun!!
-
+audio=test.mp3
 image=TITLE
 choices=START:start,Leave:exit
 
