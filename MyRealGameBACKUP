@@ -2,14 +2,12 @@ import pygame, sys, os
 import json
 #Project Conversation computer name is CH1P: Conversational Haver ( for 1 Person / or 1st Prototype )
 pygame.init()
-pygame.mixer.init()
 WIDTH, HEIGHT = 800, 600
 flags = pygame.SCALED | pygame.RESIZABLE
 screen = pygame.display.set_mode((WIDTH, HEIGHT),flags)
 pygame.display.set_caption("Project Conversation [OvO]")
 pygame.display.set_icon(pygame.image.load("icon.png"))
 font = pygame.font.SysFont(None, 32)
-current_audio_scene = None
 
 
 # makes text not go off screen--------------------------------------
@@ -40,15 +38,13 @@ def load_story(filename):
                 continue
             if line.startswith("[") and line.endswith("]"):
                 current_scene = line[1:-1]
-                story[current_scene] = {"text":"", "choices":[], "image":"default", "audio":""}
+                story[current_scene] = {"text":"", "choices":[], "image":"default"}
             elif "=" in line and current_scene:
                 key, value = line.split("=", 1)
                 if key == "text":
                     story[current_scene]["text"] = value
                 elif key == "image":
                     story[current_scene]["image"] = value
-                elif key == "audio":
-                    story[current_scene]["audio"] = value
                 elif key == "choices":
                     choices = [tuple(c.strip().split(":",1)) for c in value.split(",") if ":" in c]
                     story[current_scene]["choices"] = choices
@@ -61,10 +57,8 @@ if current_scene == "exit":
         pygame.quit()
         sys.exit()
         
-# load images/audio from folder based on text file--------------------------------------
+# load images from folder based on text file--------------------------------------
 image_folder = "image"  # folder where images are stored
-audio_folder = "audio"  # folder where audio files are stored
-
 images = {}
 for scene in story:
     img_file = os.path.join(image_folder, story[scene]["image"]+".png")
@@ -76,42 +70,6 @@ for scene in story:
         surf = pygame.Surface((525, 400))
         surf.fill((50,50,50))
         images[story[scene]["image"]] = surf
-
-
-audios = {}
-for scene in story:
-    audio_name = story[scene].get("audio", "")
-    if audio_name:
-        audio_file = os.path.join(audio_folder, audio_name)
-        if os.path.exists(audio_file):
-            try:
-                audios[audio_name] = pygame.mixer.Sound(audio_file)
-            except pygame.error:
-                audios[audio_name] = None
-        else:
-            audios[audio_name] = None
-
-
-def play_scene_audio(scene_name):
-    global current_audio_scene
-    scene = story.get(scene_name)
-    if not scene:
-        return
-    audio_name = scene.get("audio", "")
-    if audio_name == "" or audio_name is None:
-        pygame.mixer.stop()
-        current_audio_scene = None
-        return
-    if current_audio_scene == scene_name:
-        return
-    sound = audios.get(audio_name)
-    if sound:
-        pygame.mixer.stop()
-        sound.play(loops=0) #makes not loop
-        current_audio_scene = scene_name
-    else:
-        pygame.mixer.stop()
-        current_audio_scene = None
 
 
 # loop that makes thing work--------------------------------------
@@ -154,7 +112,6 @@ while running:
             elif event.key == pygame.K_3 and len(scene["choices"]) >=3:
                 current_scene = scene["choices"][2][1]
 
-    play_scene_audio(current_scene)
 
     pygame.display.flip()
 
