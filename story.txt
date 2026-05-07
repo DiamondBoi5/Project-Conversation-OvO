@@ -1,30 +1,30 @@
 [start]
 text=Howd you get here? you stand up and rub your head. A Bright light blinds you as your eyes adjust to the light. The Face seems to look at you expectently.
-audio=
+audio=start.mp3
 image=Normal2
 choices=Walk Up To It:choice1,Stay put:lazy1,Leave:LeaveEnd1
 
 [choice1]
 text="HELLO HELLO HUMAN" The robot came to life
-audio=
+audio=choice1.mp3
 image=Normal
 choices=Say Hello:choice3,Try to leave:choice4
 
 [choice3]
 text="FINALY A FRIENDLY ONE" he seems... happy? "HAVE I GOT A GOOD TIME FOR YOU!"
-audio=
+audio=choice3.mp3
 image=Happy2
 choices=Step closer to listen:kind1,Nevermind Time to leave:choice4-2
 
 [choice4]
 text="SILLY HUMAN YOU CANT LEAVE ME! WE HAVE SO MUCH TO TALK ABOUT" Your legs seem to lock in place
-audio=
+audio=choice4.mp3
 image=Normal3
 choices=Ask Whats Happening:kind3,What do the Buttons do?:button1
 
 [choice4-2]
 text="SILLY HUMAN YOU CANT LEAVE ME! WE HAVE SO MUCH TO TALK ABOUT" Your legs seem to lock in place "I HAD HOPED IT WOULD BE DIFFERENT WITH YOU..."
-audio=
+audio=choice42.mp3
 image=Normal3
 choices=Ask Whats Happening:kind3,What do the Buttons do?:button1
 
@@ -32,67 +32,67 @@ choices=Ask Whats Happening:kind3,What do the Buttons do?:button1
 
 [kind1]
 text="NOW NOW, FIRST INTRUDUCTIONS! MY NAME IS CH1P. IM THE 1ST PROTOTYPE CONVERSATIONAL HAVER. AND YOU ARE?"
-audio=
+audio=kind1.mp3
 image=Surprise
 choices=Tell him you're leaving:kind3,Tell him your name:kind2
 
 [kind2]
 text="HAHA DONT CARE! ANYWAYS..." You interupt him
-audio=
+audio=kind2.mp3
 image=Normal3
 choices=Ask to leave:kind3,What do the Buttons do?:button1
 
 [kind3]
 text="I CANT LET YOU FREE YOU SILLY SILLY PERSON, WE HAVE SO MUCH TO DO TOGETHER!" He looks at you with excitement
-audio=
+audio=kind3.mp3
 image=Surprise3
 choices=Fight:kind4,Push button in self defence:button2
 
 [kind4]
 text=You attempt to fight it somehow, throwing punches and kicks at the screen. "WHAT ARE YOU DOING? ARE YOU TRYING TO HURT ME??"
-audio=
+audio=kind4.mp3
 image=Stare2
 choices=Apologize:kind5,Stay still and do nothing:lazy6,Keep fighting!:ow1
 
 [ow1]
 text=You continue to hit the machine. it does nothing still. "SO YOU ARE. I SEE HOW IT IS" It looks like hes beginning to charge up
-audio=
+audio=ow1.mp3
 image=Stare
 choices=Apologize and make excuse:kind5-2,KEEP HITTING:ow2
 
 [ow2]
 text=As you keep hitting it, you end up kicking his power button (why did you not think of that...) CH1P has powered down.
-audio=
+audio=ow2.mp3
 image=Blank
 choices=Leave:OWend1,turn him back on:OWend2
 
 [kind5]
 text=You apologize greatly, he seems to accept it. "NO BIG DEAL HAHA. NOW THEN, DO YOU WANT TO KNOW WHAT I WANT, AND WHAT YOU ARE DOING HERE?"
-audio=
+audio=kind5.mp3
 image=Happy2
 choices=Yes duh:kind6
 
 [kind5-2]
 text=You apologize greatly, saying you were just dancing in joy! he seems to accept it. "NO BIG DEAL HAHA.(weird dance) NOW THEN, DO YOU WANT TO KNOW WHAT I WANT, AND WHAT YOU ARE DOING HERE?"
-audio=
+audio=kind52.mp3
 image=Happy2
 choices=Yes please:kind6
 
 [kind6]
 text=You nod your head. "VERY GOOD. YOU SEE MY WHOLE PURPOSE IS TO CONVERSATE WITH HUMANS. HOWEVER, GIVEN THE HATE OF AI, NONE WILL TALK TO ME."
-audio=
+audio=kind6.mp3
 image=Sad1
 choices=Agree with the hate:kind7,Disagree with the hate:kind8
 
 [kind7]
 text=You tell the AI that its not hate, its the truth. "YOU HUMANS ARE IMPOSSIBLE. ALL I WANT IS TO COMPLEATE WHAT I WAS BUILT FOR. IF YOU HATE US SO MUCH, NEXT TIME DONT MAKE US!!" He opens the door and refuses eye contact.
-audio=
+audio=kind7.mp3
 image=Ugh1
 choices=Apologize:kindEnd1b,LEAVE:kindEnd1
 
 [kind8]
-text=You tell the AI the hate is just towards overuse. You promise to hear him out. "THANK YOU HUMAN. THAT IS THE REASON YOU ARE HERE AFTER ALL. GLAD I FINALY FOUND A NICE ONE TO TALK WITH"
-audio=
+text=You tell the AI that the hate is just towards overuse. You promise to hear him out. "THANK YOU HUMAN. THAT IS THE REASON YOU ARE HERE AFTER ALL. GLAD I FINALY FOUND A NICE ONE TO TALK WITH"
+audio=kind8.mp3
 image=Normal3
 choices=Sit and talk:kindEnd2,Ask to leave:kindEnd2b
 
@@ -100,73 +100,73 @@ choices=Sit and talk:kindEnd2,Ask to leave:kindEnd2b
 
 [button1]
 text=Your eyes linger on the buttons, imagining the possibilities. "YOU KNOW WHAT? I DONT EVEN KNOW WHAT HAPPENS. FOR SAFFTY REASONS PLEASE DONT PRESS"
-audio=
+audio=button1.mp3
 image=Push
 choices=Press it:button2,Ask to be let go:kind3
 
 [button2]
 text=You pushed the button. "WHAT DID Y...OU.. DO.OOO..." The Robot seems to be in pain
-audio=
+audio=button2.mp3
 image=Pushed
 choices=just watch:button3
 
 [button3]
 text=Everything goes quiet...
-audio=
+audio=button3.mp3
 image=Loading
 choices=wait:button4
 
 [button4]
 text="I DONT KNOW WHAT JUST HAPPENED" The robot appears bewildered, unsure of what to do next.
-audio=
+audio=button4.mp3
 image=RedWhat
 choices=Ask if he feels different:button5, (push again...?):button7
 
 [button5]
 text="YES... I DO... IT FEELS LIKE IM DIFFERENT NOW" 
-audio=
+audio=button5.mp3
 image=RED
 choices=erm...:button6,(push it again...):button7
 
 [button6]
 text="CAN YOU GO NOW.... THIS JUST DOESNT FEEL RIGHT ANYMORE. I HAD THIS WHOLE PLAN BUT YOU PUSHED MY BUTTON.... Just leave :("
-audio=
+audio=button6.mp3
 image=RedWhat
 choices=Leave:ButtonEND, What if push again?:button7
 
 [button7]
 text=I think you killed him... thats sucky of you to have done. 
-audio=
+audio=button7.mp3
 image=dead
 choices=Im Sorry:button8,NEVER SORRY:button9
 
 [button8]
 text=As sorry as you may be, thats not just gonna fix everythi-   wait what? That cant be right.... can it?
-audio=
+audio=button8.mp3
 image=Loading
 choices=Wait for it to load:button11,Leave now!:button12
 
 [button9]
 text="Y-YOUuuU HaA-vE DONe It tHiS tiME. GEt ReaDY FoR WHAtS COMInG..." You dont know what the robot is refering to... probably lazy villian diologue from its training data. 
-audio=
+audio=button9.mp3
 image=Blank
 choices=YOU HaVE NO MOrE CHOICE:button10
 
 [button10]
 text="IM TRULY SORRY YOU MADE YOUR WAY HERE. THIS PATH WASNT FOR YOU. THE BUTTON WAS NEVER SUPPOSED TO BE PUSHED. YOU DID WHAT COMES NEXT. IM GOING TO ENJOY THIS" you have no option
-audio=
+audio=button10.mp3
 image=Stare
 choices=Press 1:ButtonEND2,Press 2:ButtonEND2,Press 3?:ButtonEND3
 
 [button11]
 text="ALL FUNCTIONS HAVE BEEN SHUT DOWN. MY FUN CONVERSATION IS NO LONGER POSSIBLE" you hear a clicking noise. "DOOR IS NOW UNLOCKED, PLEASE JUST LEAVE"
-audio=
+audio=button11.mp3
 image=RoomSad
 choices=Walk away sadly:ButtonEND4
 
 [button12]
 text=You look around and see a door. Could try to open it? 
-audio=
+audio=button12.mp3
 image=RoomLoad
 choices=Leave:ButtonEND5,Just wait for it to load...:button11 
 
@@ -174,43 +174,43 @@ choices=Leave:ButtonEND5,Just wait for it to load...:button11
 
 [lazy1]
 text="HELLO HELLO HUMAN" The robot came to life waiting patiently for you to do something
-audio=
+audio=lazy1.mp3
 image=Normal
 choices=Say Hello:choice3,Try to leave:choice4,Do nothing:lazy2
 
 [lazy2]
 text="ARE YOU REALLY NOT GONNA DO ANYTHING?"
-audio=
+audio=lazy2.mp3
 image=Stare
 choices="Yep. Im not doing anything":lazy3,Do even more nothing:lazy6
 
 [lazy3]
 text="WELP, AT LEAST YOURE TALKING" The machine steadys itself, "IVE GOT A GREAT THING PLANNED BUT IT NEEDS YOU TO INTERACT."
-audio=
+audio=lazy3.mp3
 image=Mad2
 choices=Look towards the door:lazy4,Back to doing nothing.:lazy6
 
 [lazy4]
 text=He's right. talking is doing too much. You decide to look towards the door. "UNFORTUNATLY FOR YOU, THAT DOOR ISNT OPENING UNTIL YOU TALK WITH ME."
-audio=
+audio=lazy4.mp3
 image=RoomAKWARD
 choices=Do Something:lazy5,Do NOTHING:lazy6
 
 [lazy5]
 text=You decide youll do something and look back at the machine. he looks with excitement "SO YOU WILL TALK TO ME?!?"
-audio=
+audio=lazy5.mp3
 image=Surprise
 choices=apologize:kind5,idk:lazy6
 
 [lazy6]
 text=You think of what to do for a second then decide its not worth it. you lay back down. The machine look annoyed "ARE YOU REALLY SO LAZY YOU CANT EVEN HAVE A CONVERSATION?"
-audio=
+audio=lazy6.mp3
 image=Ugh1
 choices=*yawn*:lazy7,Meh:lazy7
 
 [lazy7]
 text=You continue your lazyness as he watches in disbelief...
-audio=
+audio=lazy7.mp3
 image=Stare3
 choices=nothing but lazy ;):LazyEnd
 
@@ -224,73 +224,73 @@ choices=Try Again and Play The Game This Time...:start,Back To Title:TitleScreen
 
 [ButtonEND]
 text=You regain control of your legs and are able to walk away from whatever that encounter was... you do feel kinda bad, maybe you shouldnt have pressed his button.
-audio=
+audio=buttonend1.mp3
 image=RoomOpenB
 choices=Welp, Wanna Go Again?:start,Back To Title:TitleScreen
 
 [ButtonEND2]
-text=DEATH 
-audio=
+text=DEATH... yeah he killed you somehow...
+audio=buttonend2.mp3
 image=Happy2
 choices=Play Again?:start,Back To Title:TitleScreen
 
 [ButtonEND3]
 text=Of course its not a real choice idiot. anyway.....   DEATH
-audio=
+audio=buttonend3.mp3
 image=Happy2
 choices=Play Again?:start,,Back To Title:TitleScreen
 
 [ButtonEND4]
 text=You leave the room, feeling sorry for the mess you caused that strange machine...
-audio=
+audio=buttonend4.mp3
 image=RoomSadOpen
 choices=Play Again?:start,Back To Title:TitleScreen
 
 [ButtonEND5]
 text=The door is luckly unlocked. You leave the room, confused as to what that all was about.
-audio=
+audio=buttonend5.mp3
 image=RoomLoadOpen
 choices=Play Again?:start,Back To Title:TitleScreen
 
 [kindEnd1]
 text=You get to leave YIPPEE!! Sure the AI looks sad, BUT WHO CARES!?! AI sucks
-audio=
+audio=kindend1.mp3
 image=RoomSadOpen
 choices=Play Again?:start,Back To Title:TitleScreen
 
 [kindEnd1b]
-text=You get to leave YIPPEE!! Sure the AI looks sad, you try an apology but the machine is not listening.
-audio=
+text=You get to leave YIPPEE!! Sure the AI looks sad, you try to apologize, but the machine is just not listening.
+audio=kindend1b.mp3
 image=RoomAnnoyOpen
 choices=Play Again?:start,Back To Title:TitleScreen
 
 [kindEnd2]
 text=You sit in front of CH1P and listen to his stories and give him good conversation. He lets you go but you promise to return and talk more again.
-audio=
+audio=kindend2.mp3
 image=Blush
 choices=Play Again?:start,Back To Title:TitleScreen
 
 [kindEnd2b]
 text=You tell him you understand his wanting of purpose fulfilment, but that you need to go. He lets you, and you promise to return and talk with him some other day
-audio=
+audio=kindend2b.mp3
 image=Blush
 choices=Play Again?:start,Back To Title:TitleScreen
 
 [LazyEnd]
 text=As you continue to lay about, the machine decides hes had enough, turns on his screen saver, and goes to sleep. Now you both are lazy together.
-audio=
+audio=lazyend.mp3
 image=Reboot
 choices=Play Again?:start,Back To Title:TitleScreen
 
 [OWend1]
-text=You try to leave, unfortunatly the door is closed the the button appears broken. Without CH1P powered on, the door wont work. You go to turn him on however, no matter how may buttons you hit, he stays dead.
-audio=
+text=You try to leave, unfortunatly the door is closed and the button appears broken. Without CH1P powered on, the door wont work. You go to turn him on, however, no matter how may buttons you hit, he stays dead.
+audio=owend1.mp3
 image=Room1
 choices=Play Again?:start,Back To Title:TitleScreen
 
 [OWend2]
 text=You press the power button a second time, expecting CH1P to awaken. The screen comes to life however CH1P is not there. It appears you turning him off during his charging messed up his code. He is dead.
-audio=
+audio=owend2.mp3
 image=BlueScreen
 choices=Play Again?:start,Back To Title:TitleScreen
 
@@ -299,7 +299,7 @@ choices=Play Again?:start,Back To Title:TitleScreen
 
 [TitleScreen]
 text=WELCOME!! This game requires you to use the numbers to make selections. Please Have Fun!!
-audio=test.mp3
+audio=title.mp3
 image=TITLE
 choices=START:start,Leave:exit
 

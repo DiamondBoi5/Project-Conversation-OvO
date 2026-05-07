@@ -4,10 +4,10 @@ import json
 pygame.init()
 pygame.mixer.init()
 WIDTH, HEIGHT = 800, 600
-flags = pygame.SCALED | pygame.RESIZABLE
+flags = pygame.SCALED | pygame.RESIZABLE #makes game resizeable and not blurry
 screen = pygame.display.set_mode((WIDTH, HEIGHT),flags)
-pygame.display.set_caption("Project Conversation [OvO]")
-pygame.display.set_icon(pygame.image.load("icon.png"))
+pygame.display.set_caption("Project Conversation [OvO]") #name of window
+pygame.display.set_icon(pygame.image.load("icon.png")) #icon for window
 font = pygame.font.SysFont(None, 32)
 current_audio_scene = None
 
@@ -57,7 +57,7 @@ def load_story(filename):
 story = load_story("story.txt")
 current_scene = "TitleScreen"
 
-if current_scene == "exit":
+if current_scene == "exit": #quit game
         pygame.quit()
         sys.exit()
         
@@ -66,20 +66,20 @@ image_folder = "image"  # folder where images are stored
 audio_folder = "audio"  # folder where audio files are stored
 
 images = {}
-for scene in story:
+for scene in story:   #loads image for each scene based on text file, if messed up load placeholder
     img_file = os.path.join(image_folder, story[scene]["image"]+".png")
     if os.path.exists(img_file):
         img = pygame.image.load(img_file)
         images[story[scene]["image"]] = pygame.transform.scale(img, (525, 400))
     else:
-        # placeholder if messup load image
+        # placeholder gray box if messup load image
         surf = pygame.Surface((525, 400))
         surf.fill((50,50,50))
         images[story[scene]["image"]] = surf
 
 
-audios = {}
-for scene in story:
+audios = {} 
+for scene in story: #loads audio for each scene based on text file, if no file then load None
     audio_name = story[scene].get("audio", "")
     if audio_name:
         audio_file = os.path.join(audio_folder, audio_name)
@@ -92,7 +92,7 @@ for scene in story:
             audios[audio_name] = None
 
 
-def play_scene_audio(scene_name):
+def play_scene_audio(scene_name): #plays audio for each scene based on text file "audio=name.mp3"
     global current_audio_scene
     scene = story.get(scene_name)
     if not scene:
@@ -117,7 +117,7 @@ def play_scene_audio(scene_name):
 # loop that makes thing work--------------------------------------
 running = True
 while running:
-    screen.fill((130,86,61))
+    screen.fill((130,86,61)) #background color
     pygame.draw.rect(screen, (0,0,0), (133,0,540,400)) #border for image
     scene = story[current_scene]
 
@@ -161,7 +161,7 @@ while running:
 pygame.quit()
 sys.exit()
 
-#Music Player NOT USED--------------------------------------
+#Music Player --NOT USED BUT HELPFUL STUFF LEARNED--------------------------------------
 #pygame.mixer.init()
 #pygame.mixer.music.load("BGM.mp3")
 
