@@ -155,7 +155,7 @@ choices=Wait for it to load:button11,Leave now!:button12
 [button9]
 text="Y-YOUuuU HaA-vE DONe It tHiS tiME. GEt ReaDY FoR WHAtS COMInG..." You dont know what the robot is refering to... probably lazy villian diologue from its training data. 
 audio=button9.mp3
-image=Blank
+image=Loading
 choices=YOU HaVE NO MOrE CHOICE:button10
 
 [button10]
