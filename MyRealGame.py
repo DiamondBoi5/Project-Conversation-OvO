@@ -57,9 +57,6 @@ def load_story(filename):
 story = load_story("story.txt")
 current_scene = "TitleScreen"
 
-if current_scene == "exit": #quit game
-        pygame.quit()
-        sys.exit()
         
 # load images/audio from folder based on text file--------------------------------------
 image_folder = "image"  # folder where images are stored
@@ -117,6 +114,10 @@ def play_scene_audio(scene_name): #plays audio for each scene based on text file
 # loop that makes thing work--------------------------------------
 running = True
 while running:
+    if current_scene == "exit":
+        pygame.quit()
+        sys.exit()
+    
     screen.fill((130,86,61)) #background color
     pygame.draw.rect(screen, (0,0,0), (133,0,540,400)) #border for image
     scene = story[current_scene]
@@ -140,7 +141,6 @@ while running:
         choice_text = f"{i+1}. {choice[0]}"
         choice_surface = font.render(choice_text, True, (255,242,0))
         screen.blit(choice_surface, (20,510 + i*30))
-    
 
     # the button press reader 9000--------------------------------------
     for event in pygame.event.get():
